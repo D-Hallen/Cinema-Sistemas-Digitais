@@ -53,7 +53,7 @@ public class SessaoService {
         if (optionalSessao.isPresent()){
             Sessao sessao= optionalSessao.get();
             if (sessao.getLugaresDisponiveis().contains(lugar)){
-                sessao.getLugaresDisponiveis().remove(lugar);
+                sessao.getLugaresDisponiveis().remove((Integer) lugar);
                 sessaoRepository.save(sessao);
                 return true;
             }
