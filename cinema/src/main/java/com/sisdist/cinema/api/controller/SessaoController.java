@@ -20,32 +20,47 @@ public class SessaoController {
     }
 
     @GetMapping
-    public List<Sessao> listSessoes() {
-        return sessaoService.listSessoes();
+    public ResponseEntity<List<Sessao>> listSessoes() {
+        List<Sessao> sessoes = sessaoService.listSessoes();
+        if (!sessoes.isEmpty()) {
+            return ResponseEntity.ok(sessoes);
+        } else {
+            return ResponseEntity.noContent().build();
+        }
     }
 
-    // Obter uma sessão pelo ID
     @GetMapping("/{id}")
-    public Optional<Sessao> getSessaoById(@PathVariable int id) {
-        return sessaoService.getSessaoById(id);
+    public ResponseEntity<Sessao> getSessaoById(@PathVariable int id) {
+        Optional<Sessao> sessao = sessaoService.getSessaoById(id);
+        return sessao.map(ResponseEntity::ok)
+                .orElse(ResponseEntity.status(404).build());
     }
 
-    // Adicionar uma nova sessão
     @PostMapping
-    public Sessao saveSessao(@RequestBody Sessao sessao) {
-        return sessaoService.saveSessao(sessao);
+    public ResponseEntity<Sessao> saveSessao(@RequestBody Sessao sessao) {
+        Sessao novaSessao = sessaoService.saveSessao(sessao);
+        return ResponseEntity.status(201).body(novaSessao);
     }
 
-    // Atualizar uma sessão existente
     @PutMapping("/{id}")
-    public Sessao updateSessao(@RequestBody Sessao sessao, @PathVariable int id) {
-        return sessaoService.updateSessao(sessao, id);
+    public ResponseEntity<Sessao> updateSessao(@RequestBody Sessao sessao, @PathVariable int id) {
+        Sessao sessaoAtualizada = sessaoService.updateSessao(sessao, id);
+        if (sessaoAtualizada != null) {
+            return ResponseEntity.ok(sessaoAtualizada);
+        } else {
+            return ResponseEntity.status(404).build();
+        }
     }
 
-    // Deletar uma sessão
     @DeleteMapping("/{id}")
-    public void deleteSessao(@PathVariable int id) {
-        sessaoService.deleteSessao(id);
+    public ResponseEntity<Void> deleteSessao(@PathVariable int id) {
+        Optional<Sessao> sessao = sessaoService.getSessaoById(id);
+        if (sessao.isPresent()) {
+            sessaoService.deleteSessao(id);
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.status(404).build();
+        }
     }
 
     @PostMapping("/{id}/selecionar-lugar/{lugar}")
@@ -57,6 +72,4 @@ public class SessaoController {
             return ResponseEntity.badRequest().body("Erro: Lugar não disponível ou sessão inexistente.");
         }
     }
-
-
 }
