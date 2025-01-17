@@ -20,7 +20,7 @@ public class FilmeController {
         this.filmeService = filmeService;
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Filme> getFilme(@PathVariable int id) {
+    public ResponseEntity<Filme> getFilmeById(@PathVariable int id) {
         Optional<Filme> filme = filmeService.getFilmeByID(id);
         if (filme.isPresent()){
             return ResponseEntity.ok(filme.get());
