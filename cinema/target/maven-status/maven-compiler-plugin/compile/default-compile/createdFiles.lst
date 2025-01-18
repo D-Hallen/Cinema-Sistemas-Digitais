@@ -1,7 +1,9 @@
 com\sisdist\cinema\service\UsuarioService.class
 com\sisdist\cinema\repository\ProdutoRepository.class
+com\sisdist\cinema\service\FidelidadeService.class
 com\sisdist\cinema\api\model\Estoque.class
 com\sisdist\cinema\api\model\Produto.class
+com\sisdist\cinema\api\controller\FidelidadeController.class
 com\sisdist\cinema\api\model\Sala.class
 com\sisdist\cinema\service\SalaService.class
 com\sisdist\cinema\repository\FilmeRepository.class
@@ -9,6 +11,7 @@ com\sisdist\cinema\CinemaApplication.class
 com\sisdist\cinema\service\ProdutoService.class
 com\sisdist\cinema\api\controller\FilmeController.class
 com\sisdist\cinema\repository\SalaRepository.class
+com\sisdist\cinema\repository\FidelidadeRepository.class
 com\sisdist\cinema\api\model\Filme.class
 com\sisdist\cinema\api\model\Ingresso.class
 com\sisdist\cinema\repository\SessaoRepository.class
@@ -30,4 +33,5 @@ com\sisdist\cinema\api\controller\SessaoController.class
 com\sisdist\cinema\repository\EstoqueRepository.class
 com\sisdist\cinema\repository\UsuarioRepository.class
 com\sisdist\cinema\api\controller\IngressoController.class
+com\sisdist\cinema\api\model\Fidelidade.class
 com\sisdist\cinema\repository\OfertaRepository.class
