@@ -1,6 +1,7 @@
 package com.sisdist.cinema.api.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ public class Usuario {
     private String nomeCompleto;
 
     @Column(unique = true)
+    @Email
     private String email;
 
     private String senha;
@@ -29,7 +31,10 @@ public class Usuario {
 
     public Usuario() {
     }
-
+    @PrePersist
+    protected void onCreate() {
+        dataCadastro = LocalDate.now();
+    }
     public Usuario(String nomeCompleto, String email, String senha, LocalDate dataNascimento, String cpf, String telefone, String endereco, String nivelAcesso, LocalDate dataCadastro, String status) {
         this.nomeCompleto = nomeCompleto;
         this.email = email;

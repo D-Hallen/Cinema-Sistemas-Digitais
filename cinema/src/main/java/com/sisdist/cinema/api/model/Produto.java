@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 @Entity
 public class Produto {
@@ -12,9 +15,17 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @NotNull(message = "O nome do produto é obrigatório")
     private String nome;
+
     private String descricao;
+
+    @NotNull(message = "O valor do produto é obrigatório")
+    @Positive(message = "O valor deve ser positivo")
     private Double valor;
+
+    @NotNull(message = "A quantidade disponível é obrigatória")
+    @Min(value = 0, message = "A quantidade não pode ser negativa")
     private int qtdDisp;
 
     public Produto() {
