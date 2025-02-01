@@ -1,5 +1,6 @@
 package com.sisdist.cinema.api.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,6 +11,7 @@ public class Ingresso {
 
     @ManyToOne
     @JoinColumn(name = "sessao_id", nullable = false)
+    @JsonIgnore // Evita loop se Sessao tiver lista de ingressos
     private Sessao sessao;
 
     private int numeroLugar;

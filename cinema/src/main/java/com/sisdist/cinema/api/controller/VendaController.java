@@ -24,6 +24,7 @@ public class VendaController {
     // Cria uma nova venda
     @PostMapping
     public ResponseEntity<Venda> criarVenda(@Valid @RequestBody VendaRequest vendaRequest) {
+        //System.out.println(vendaRequest);
         Venda venda = vendaService.saveVenda(vendaRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(venda);
     }

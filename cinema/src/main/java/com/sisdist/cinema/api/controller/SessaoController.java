@@ -1,6 +1,8 @@
 package com.sisdist.cinema.api.controller;
 
+import com.sisdist.cinema.api.model.Reserva;
 import com.sisdist.cinema.api.model.Sessao;
+import com.sisdist.cinema.api.request.ReservaRequest;
 import com.sisdist.cinema.service.SessaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/sessoes")
-public class SessaoController {
+public class    SessaoController {
     private final SessaoService sessaoService;
 
     @Autowired
@@ -27,6 +29,23 @@ public class SessaoController {
         } else {
             return ResponseEntity.noContent().build();
         }
+    }
+
+    @GetMapping("/{id}/disponiveis")
+    public ResponseEntity<List<Integer>> getDisponiveis(@PathVariable int id){
+        Optional<Sessao> sessao = sessaoService.getSessaoById(id);
+        if (sessao!= null){
+            return ResponseEntity.ok((sessao.get().getLugaresDisponiveis()));
+        }
+        else {
+            return ResponseEntity.status(404).build();
+        }
+    }
+
+    @PostMapping("/{id}/reservar")
+    public ResponseEntity<Reserva> reservarLugar (@PathVariable int id, @RequestBody ReservaRequest reservaRequest){
+        Optional<Reserva> reserva = sessaoService.fazReserva(id, reservaRequest);
+        return reserva.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.status(404).build());
     }
 
     @GetMapping("/{id}")

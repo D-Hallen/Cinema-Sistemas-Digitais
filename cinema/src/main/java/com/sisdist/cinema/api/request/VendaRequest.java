@@ -5,7 +5,8 @@ import java.util.List;
 
 public class VendaRequest {
     private int usuarioId; // ID do usuário que fez a venda
-    private List<ItemVendaRequest> itens; // Lista de itens da venda
+    private List<ProdutoRequest> produtos; // Lista de produtos
+    private List<IngressoRequest> ingressos; // Lista de ingressos
 
     public int getUsuarioId() {
         return usuarioId;
@@ -15,11 +16,23 @@ public class VendaRequest {
         this.usuarioId = usuarioId;
     }
 
-    public List<ItemVendaRequest> getItens() {
-        return itens;
+    public List<ProdutoRequest> getProdutos() {
+        return produtos;
     }
 
-    public void setItens(List<ItemVendaRequest> itens) {
-        this.itens = itens;
+    public void setProdutos(List<ProdutoRequest> produtos) {
+        this.produtos = produtos;
+    }
+
+    public List<IngressoRequest> getIngressos() {
+        return ingressos;
+    }
+
+    public void setIngressos(List<IngressoRequest> ingressos) {
+        this.ingressos = ingressos;
+    }
+
+    public boolean isValid() {
+        return (produtos != null && !produtos.isEmpty()) || (ingressos != null && !ingressos.isEmpty());
     }
 }

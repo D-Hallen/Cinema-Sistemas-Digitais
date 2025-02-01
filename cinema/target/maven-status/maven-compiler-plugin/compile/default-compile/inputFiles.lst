@@ -16,11 +16,15 @@ C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\ma
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\ItemVenda.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Oferta.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Produto.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Reserva.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Sala.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Sessao.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Usuario.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Venda.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\request\IngressoRequest.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\request\ItemVendaRequest.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\request\ProdutoRequest.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\request\ReservaRequest.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\request\VendaRequest.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\CinemaApplication.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\EstoqueRepository.java
@@ -30,6 +34,7 @@ C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\ma
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\ItemVendaRepository.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\OfertaRepository.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\ProdutoRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\ReservaRepository.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\SalaRepository.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\SessaoRepository.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\UsuarioRepository.java

@@ -1,6 +1,7 @@
 package com.sisdist.cinema.api.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,15 +12,15 @@ public class ItemVenda {
 
     @ManyToOne
     @JoinColumn(name = "venda_id", nullable = false)
-    @JsonBackReference
+    @JsonBackReference // Correto: não serializa a venda novamente
     private Venda venda;
 
     @ManyToOne
-    @JoinColumn(name = "produto_id")
+    @JoinColumn(name = "produto_id", nullable = true)
     private Produto produto;
 
     @ManyToOne
-    @JoinColumn(name = "ingresso_id")
+    @JoinColumn(name = "ingresso_id", nullable = true)
     private Ingresso ingresso;
 
     private int quantidade;
