@@ -26,6 +26,9 @@ public class Sessao {
     @ElementCollection
     private List<Integer> lugaresDisponiveis;
 
+    @Version
+    private int version;
+
     public Sessao() {
     }
 

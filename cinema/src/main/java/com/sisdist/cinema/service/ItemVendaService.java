@@ -28,16 +28,6 @@ public class ItemVendaService {
     public ItemVenda atualizarItem(int id, ItemVenda itemAtualizado) {
         ItemVenda itemExistente = itemVendaRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Item não encontrado"));
-
-        // Atualiza os campos permitidos
-        itemExistente.setQuantidade(itemAtualizado.getQuantidade());
-        if (itemAtualizado.getProduto() != null) {
-            itemExistente.setProduto(itemAtualizado.getProduto());
-        }
-        if (itemAtualizado.getIngresso() != null) {
-            itemExistente.setIngresso(itemAtualizado.getIngresso());
-        }
-
         // Recalcula o subtotal
         itemExistente.setSubtotal(itemExistente.getPrecoUnitario() * itemExistente.getQuantidade());
 

@@ -19,6 +19,9 @@ public class Ingresso {
     private double valor;
     private String status;
 
+    @Version
+    private int version;
+
     public Ingresso() {
     }
 

@@ -13,9 +13,11 @@ C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\ma
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Fidelidade.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Filme.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Ingresso.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\IngressoVenda.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\ItemVenda.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Oferta.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Produto.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\ProdutoVenda.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Reserva.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Sala.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\model\Sessao.java
@@ -27,6 +29,7 @@ C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\ma
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\request\ReservaRequest.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\api\request\VendaRequest.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\CinemaApplication.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\CORSConfig.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\EstoqueRepository.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\FidelidadeRepository.java
 C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\FilmeRepository.java

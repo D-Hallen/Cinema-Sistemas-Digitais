@@ -1,9 +1,6 @@
 package com.sisdist.cinema.api.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -27,6 +24,9 @@ public class Produto {
     @NotNull(message = "A quantidade disponível é obrigatória")
     @Min(value = 0, message = "A quantidade não pode ser negativa")
     private int qtdDisp;
+
+    @Version
+    private int version;
 
     public Produto() {
     }

@@ -15,7 +15,7 @@ public class Venda {
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
-    private Usuario usuario; // Pode causar loop se Usuario tiver lista de vendas!
+    private Usuario usuario;
 
     @OneToMany(mappedBy = "venda", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference

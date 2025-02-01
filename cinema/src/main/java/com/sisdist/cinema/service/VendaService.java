@@ -6,6 +6,7 @@ import com.sisdist.cinema.api.request.ItemVendaRequest;
 import com.sisdist.cinema.api.request.ProdutoRequest;
 import com.sisdist.cinema.api.request.VendaRequest;
 import com.sisdist.cinema.repository.*;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,20 +46,15 @@ public class VendaService {
         return vendaRepository.findById(id);
     }
 
+    @Transactional
     public Venda saveVenda(VendaRequest vendaRequest) {
-
         Usuario usuario = usuarioRepository.findById(vendaRequest.getUsuarioId())
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
 
-        // Cria a venda
         Venda venda = new Venda();
         venda.setUsuario(usuario);
         venda.setDataVenda(LocalDateTime.now());
         venda.setItens(new ArrayList<>());
-
-
-
-
 
         // Processa produtos
         if (vendaRequest.getProdutos() != null) {
@@ -66,13 +62,13 @@ public class VendaService {
                 Produto produto = produtoRepository.findById(produtoRequest.getProdutoId())
                         .orElseThrow(() -> new RuntimeException("Produto não encontrado: ID " + produtoRequest.getProdutoId()));
 
-                ItemVenda item = new ItemVenda();
+                ProdutoVenda item = new ProdutoVenda(); // Usa a subclasse específica
                 item.setVenda(venda);
-                item.setProduto(produto);
+                item.setProduto(produto); // Método específico de ProdutoVenda
                 item.setQuantidade(produtoRequest.getQuantidade());
                 item.setPrecoUnitario(produto.getValor());
                 item.setSubtotal(produto.getValor() * produtoRequest.getQuantidade());
-                System.out.println(item.toString());
+
                 venda.getItens().add(item);
             }
         }
@@ -80,13 +76,12 @@ public class VendaService {
         // Processa ingressos
         if (vendaRequest.getIngressos() != null) {
             for (IngressoRequest ingressoRequest : vendaRequest.getIngressos()) {
-                System.out.println("Ingresso ID "+ingressoRequest.getIngressoId());
                 Ingresso ingresso = ingressoRepository.findById(ingressoRequest.getIngressoId())
                         .orElseThrow(() -> new RuntimeException("Ingresso não encontrado: ID " + ingressoRequest.getIngressoId()));
 
-                ItemVenda item = new ItemVenda();
+                IngressoVenda item = new IngressoVenda(); // Usa a subclasse específica
                 item.setVenda(venda);
-                item.setIngresso(ingresso);
+                item.setIngresso(ingresso); // Método específico de IngressoVenda
                 item.setQuantidade(ingressoRequest.getQuantidade());
                 item.setPrecoUnitario(ingresso.getValor());
                 item.setSubtotal(ingresso.getValor() * ingressoRequest.getQuantidade());
@@ -101,27 +96,8 @@ public class VendaService {
                 .sum();
         venda.setValorTotal(valorTotal);
 
-        // Salva a venda e os itens
-
-
-        System.out.println("\n--- ITENS DEPOIS DO PROCESSAMENTO ---");
-        for (ItemVenda item : venda.getItens()) {
-            System.out.println("ItemVenda (Após processamento):");
-            System.out.println("  ID: " + item.getId());
-            System.out.println("  Produto ID: " + (item.getProduto() != null ? item.getProduto().getId() : "Nulo"));
-            System.out.println("  Ingresso ID: " + (item.getIngresso() != null ? item.getIngresso().getId() : "Nulo"));
-            System.out.println("  Quantidade: " + item.getQuantidade());
-            System.out.println("  Preço Unitário: " + item.getPrecoUnitario());
-            System.out.println("  Subtotal: " + item.getSubtotal());
-            System.out.println("  Venda ID associada: " + (item.getVenda() != null ? item.getVenda().getId() : "Nulo"));
-            System.out.println("----------------------------------");
-        }
-
-        vendaRepository.save(venda);
-
-        itemVendaRepository.saveAll(venda.getItens());
-
-        return venda;
+        // Salva a venda e os itens (cascade ALL já cuida disso)
+        return vendaRepository.save(venda);
     }
 
     public Venda updateVenda(Venda venda, int id) {

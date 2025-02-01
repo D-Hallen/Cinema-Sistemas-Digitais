@@ -5,7 +5,9 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 
 @Entity
-public class ItemVenda {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo_item", discriminatorType = DiscriminatorType.STRING)
+public abstract class ItemVenda {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -14,14 +16,6 @@ public class ItemVenda {
     @JoinColumn(name = "venda_id", nullable = false)
     @JsonBackReference // Correto: não serializa a venda novamente
     private Venda venda;
-
-    @ManyToOne
-    @JoinColumn(name = "produto_id", nullable = true)
-    private Produto produto;
-
-    @ManyToOne
-    @JoinColumn(name = "ingresso_id", nullable = true)
-    private Ingresso ingresso;
 
     private int quantidade;
     private double precoUnitario;
@@ -44,30 +38,6 @@ public class ItemVenda {
 
     public void setVenda(Venda venda) {
         this.venda = venda;
-    }
-
-    public Produto getProduto() {
-        return produto;
-    }
-
-    public void setProduto(Produto produto) {
-        this.produto = produto;
-    }
-
-    public Ingresso getIngresso() {
-        return ingresso;
-    }
-
-    public void setIngresso(Ingresso ingresso) {
-        this.ingresso = ingresso;
-    }
-
-    public int getProdutoId(){
-        return this.produto.getId();
-    }
-
-    public int getIngressoId(){
-        return this.ingresso.getId();
     }
 
     public int getQuantidade() {

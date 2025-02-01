@@ -11,6 +11,7 @@ com\sisdist\cinema\service\ItemVendaService.class
 com\sisdist\cinema\repository\IngressoRepository.class
 com\sisdist\cinema\api\controller\SalaController.class
 com\sisdist\cinema\api\controller\OfertaController.class
+com\sisdist\cinema\api\model\ProdutoVenda.class
 com\sisdist\cinema\api\model\Usuario.class
 com\sisdist\cinema\service\EstoqueService.class
 com\sisdist\cinema\service\IngressoService.class
@@ -37,6 +38,7 @@ com\sisdist\cinema\repository\ReservaRepository.class
 com\sisdist\cinema\repository\SessaoRepository.class
 com\sisdist\cinema\api\controller\UsuarioController.class
 com\sisdist\cinema\api\controller\EstoqueController.class
+com\sisdist\cinema\api\model\IngressoVenda.class
 com\sisdist\cinema\api\model\Venda.class
 com\sisdist\cinema\api\model\ItemVenda.class
 com\sisdist\cinema\service\SessaoService.class
@@ -48,5 +50,6 @@ com\sisdist\cinema\service\FilmeService.class
 com\sisdist\cinema\api\controller\ProdutoController.class
 com\sisdist\cinema\repository\ItemVendaRepository.class
 com\sisdist\cinema\api\controller\SessaoController.class
+com\sisdist\cinema\CORSConfig.class
 com\sisdist\cinema\api\request\ItemVendaRequest.class
 com\sisdist\cinema\repository\VendaRepository.class
