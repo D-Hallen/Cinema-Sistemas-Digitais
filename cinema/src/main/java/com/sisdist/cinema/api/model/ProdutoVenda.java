@@ -12,6 +12,16 @@ public class ProdutoVenda extends ItemVenda {
     @JoinColumn(name = "produto_id", nullable = false)
     private Produto produto;
 
+    public ProdutoVenda() {
+    }
+
+    public ProdutoVenda(Produto produto, int quantidade) {
+        this.produto = produto;
+        this.setQuantidade(quantidade);
+        this.setPrecoUnitario(this.produto.getValor());
+        this.setSubtotal(produto.getValor() * quantidade); // Calcula o subtotal
+    }
+
     public Produto getProduto() {
         return produto;
     }

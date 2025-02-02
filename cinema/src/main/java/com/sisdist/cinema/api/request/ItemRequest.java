@@ -1,15 +1,15 @@
 package com.sisdist.cinema.api.request;
 
-public class IngressoRequest {
-    private int ingressoId;
+public class ItemRequest {
+    private int id;
     private int quantidade;
 
-    public int getIngressoId() {
-        return ingressoId;
+    public int getId() {
+        return id;
     }
 
-    public void setIngressoId(int ingressoId) {
-        this.ingressoId = ingressoId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getQuantidade() {

@@ -5,8 +5,8 @@ import java.util.List;
 
 public class VendaRequest {
     private int usuarioId; // ID do usuário que fez a venda
-    private List<ProdutoRequest> produtos; // Lista de produtos
-    private List<IngressoRequest> ingressos; // Lista de ingressos
+    private List<ItemRequest> produtos; // Lista de produtos
+    private List<ItemRequest> ingressos; // Lista de ingressos
 
     public int getUsuarioId() {
         return usuarioId;
@@ -16,19 +16,19 @@ public class VendaRequest {
         this.usuarioId = usuarioId;
     }
 
-    public List<ProdutoRequest> getProdutos() {
+    public List<ItemRequest> getProdutos() {
         return produtos;
     }
 
-    public void setProdutos(List<ProdutoRequest> produtos) {
+    public void setProdutos(List<ItemRequest> produtos) {
         this.produtos = produtos;
     }
 
-    public List<IngressoRequest> getIngressos() {
+    public List<ItemRequest> getIngressos() {
         return ingressos;
     }
 
-    public void setIngressos(List<IngressoRequest> ingressos) {
+    public void setIngressos(List<ItemRequest> ingressos) {
         this.ingressos = ingressos;
     }
 

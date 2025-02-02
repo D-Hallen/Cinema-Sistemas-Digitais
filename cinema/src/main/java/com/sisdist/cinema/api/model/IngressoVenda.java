@@ -12,6 +12,16 @@ public class IngressoVenda extends ItemVenda{
     @JoinColumn(name = "ingresso_id", nullable = false)
     private Ingresso ingresso;
 
+    public IngressoVenda() {
+    }
+
+    public IngressoVenda(Ingresso ingresso, int quantidade) {
+        this.ingresso = ingresso;
+        this.setQuantidade(quantidade);
+        this.setPrecoUnitario(this.ingresso.getValor());
+        this.setSubtotal(ingresso.getValor() * quantidade); // Calcula o subtotal
+    }
+
     public Ingresso getIngresso() {
         return ingresso;
     }
