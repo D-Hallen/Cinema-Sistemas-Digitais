@@ -4,6 +4,7 @@ import com.sisdist.cinema.api.model.ItemVenda;
 import com.sisdist.cinema.api.model.Usuario;
 import com.sisdist.cinema.api.model.Venda;
 import com.sisdist.cinema.api.request.VendaRequest;
+import com.sisdist.cinema.api.rmi.VendaRMI;
 import com.sisdist.cinema.service.VendaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,13 +23,31 @@ public class VendaController {
 
     @Autowired
     private VendaService vendaService;
+    private VendaRMI vendaServiceRMI;
+
+    public VendaController() {
+        try {
+            // Conecta ao registro RMI (mesma JVM, localhost)
+            //WIP WIP
+            Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+            vendaServiceRMI = (VendaRMI) registry.lookup("VendaService");
+        } catch (Exception e) {
+            System.err.println("Erro ao conectar ao serviço RMI:");
+            e.printStackTrace();
+        }
+    }
 
     // Cria uma nova venda
     @PostMapping
     public ResponseEntity<Venda> criarVenda(@Valid @RequestBody VendaRequest vendaRequest) {
-        //System.out.println(vendaRequest);
-        Venda venda = vendaService.saveVenda(vendaRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body(venda);
+        try {
+            Venda vendaRegistrada = vendaServiceRMI.registrarVenda(vendaRequest);
+            return ResponseEntity.ok(vendaRegistrada);
+        } catch (Exception e) {
+            return ResponseEntity
+                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(null);
+        }
     }
 
     // Busca uma venda por ID

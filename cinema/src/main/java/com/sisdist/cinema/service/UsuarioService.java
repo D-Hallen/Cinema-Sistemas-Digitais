@@ -1,12 +1,15 @@
 package com.sisdist.cinema.service;
 
 import com.sisdist.cinema.api.model.Usuario;
+import com.sisdist.cinema.api.request.LoginRequest;
+import com.sisdist.cinema.config.BusinessException;
 import com.sisdist.cinema.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class UsuarioService {
@@ -26,11 +29,30 @@ public class UsuarioService {
     }
 
     public Usuario saveUsuario (Usuario usuario){
+        String token = UUID.randomUUID().toString();
+        usuario.setToken(token);
         return usuarioRepository.save(usuario);
     }
 
     public void deleteUsuario (int id){
         usuarioRepository.deleteById(id);
+    }
+
+    public String authenticateUser(LoginRequest loginRequest){
+        Optional<Usuario> usuarioOptional= usuarioRepository.findByEmail(loginRequest.getEmail());
+        if (usuarioOptional.isPresent()) {
+            Usuario usuario = usuarioOptional.get();
+
+            // Verifica se a senha está correta
+            if (usuario.getSenha().equals(loginRequest.getSenha())) {
+                // Retorna o token do usuário
+                return usuario.getToken();
+            } else {
+                throw new BusinessException("Senha Incorreta");
+            }
+        } else {
+            throw new BusinessException("Usuário não encontrado");
+        }
     }
 
     public Usuario updateUsuario (int id, Usuario usuario){

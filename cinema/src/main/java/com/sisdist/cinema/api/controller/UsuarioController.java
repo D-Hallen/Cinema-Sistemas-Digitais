@@ -1,6 +1,7 @@
 package com.sisdist.cinema.api.controller;
 
 import com.sisdist.cinema.api.model.Usuario;
+import com.sisdist.cinema.api.request.LoginRequest;
 import com.sisdist.cinema.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -66,6 +67,17 @@ public class UsuarioController {
             return ResponseEntity.noContent().build(); // Retorna 204 No Content
         } else{
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginRequest loginDTO) {
+        String token = usuarioService.authenticateUser(loginDTO);
+
+        if (token != null) {
+            return ResponseEntity.ok(token);
+        } else {
+            return ResponseEntity.status(401).body("Credenciais inválidas");
         }
     }
 

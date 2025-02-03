@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import org.springframework.cglib.core.Local;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
-public class Usuario {
+public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -28,6 +29,16 @@ public class Usuario {
     private String nivelAcesso;
     private LocalDate dataCadastro;
     private String status;
+
+    private String token;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public Usuario() {
     }
