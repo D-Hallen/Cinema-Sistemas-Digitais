@@ -1,6 +1,0 @@
-# Preencha com suas credenciais de banco de dados
-
-# Exemplo:
-# spring.datasource.url=jdbc:mysql://localhost:3306/SEUBANCO
-# spring.datasource.username=SEUUSUARIO
-# spring.datasource.password=SUASENHA

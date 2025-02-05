@@ -1,6 +1,6 @@
 package com.sisdist.cinema.repository;
 
-import com.sisdist.cinema.api.model.Filme;
+import com.sisdist.cinema.model.Filme;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,5 +13,4 @@ public interface FilmeRepository extends JpaRepository<Filme, Integer> {
 
     // Busca por gênero (usando o @ElementCollection no atributo 'generos')
     List<Filme> findByGenerosContainingIgnoreCase(String genero);
-
 }
