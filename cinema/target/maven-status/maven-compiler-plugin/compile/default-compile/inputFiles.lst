@@ -1,50 +1,59 @@
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\CinemaApplication.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\config\BusinessException.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\config\CORSConfig.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\config\GlobalExceptionHandler.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\config\RmiClientConfig.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\controller\FilmeController.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\controller\IngressoController.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\controller\ProdutoController.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\controller\SalaController.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\controller\SessaoController.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\controller\UserController.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\controller\VendaController.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Estoque.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Fidelidade.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Filme.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Ingresso.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\IngressoVenda.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\ItemVenda.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Oferta.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Produto.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\ProdutoVenda.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Reserva.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\ReservaRequest.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Sala.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Sessao.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Usuario.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\Venda.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\model\VendaRequest.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\repository\FilmeRepository.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\repository\IngressoRepository.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\repository\ProdutoRepository.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\repository\ReservaRepository.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\repository\SalaRepository.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\repository\SessaoRepository.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\repository\UsuarioRepository.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\repository\VendaRepository.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\FilmeServiceImpl.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\IngressoServiceImpl.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\ProdutoServiceImpl.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\SalaServiceImpl.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\SessaoService.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\UserServiceImpl.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\VendaServiceImpl.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Service\FilmeService.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Service\IngressoService.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Service\ProdutoService.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Service\SalaService.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Service\UserService.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\rmi\Service\VendaService.java
-C:\Users\danie\OneDrive\Área de Trabalho\Cinema-Sistemas-Digitais-main\cinema\src\main\java\com\sisdist\cinema\RmiInitializer.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\CinemaApplication.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\config\BusinessException.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\config\CORSConfig.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\config\GlobalExceptionHandler.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\config\RmiClientConfig.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\EstoqueController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\FidelidadeController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\FilmeController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\IngressoController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\OfertaController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\ProdutoController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\SalaController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\SessaoController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\UserController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\controller\VendaController.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Estoque.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Fidelidade.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Filme.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Ingresso.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\IngressoVenda.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\ItemVenda.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Oferta.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Produto.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\ProdutoVenda.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Reserva.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\ReservaRequest.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Sala.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Sessao.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Usuario.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\Venda.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\model\VendaRequest.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\EstoqueRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\FidelidadeRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\FilmeRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\IngressoRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\OfertaRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\ProdutoRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\ReservaRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\SalaRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\SessaoRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\UsuarioRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\repository\VendaRepository.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\EstoqueService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\FidelidadeService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\FilmeServiceImpl.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\IngressoServiceImpl.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\OfertaService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\ProdutoServiceImpl.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\SalaServiceImpl.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\SessaoService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\UserServiceImpl.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Implementation\VendaServiceImpl.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Service\FilmeService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Service\IngressoService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Service\ProdutoService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Service\SalaService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Service\UserService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\rmi\Service\VendaService.java
+C:\Users\danie\OneDrive\Documentos\GitHub\Cinema-Sistemas-Digitais\cinema\src\main\java\com\sisdist\cinema\RmiInitializer.java

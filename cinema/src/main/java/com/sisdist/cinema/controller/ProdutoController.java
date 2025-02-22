@@ -50,7 +50,7 @@ public class ProdutoController {
     public ResponseEntity<Void> deleteProduto(@PathVariable int id) throws RemoteException {
         if (produtoService.findProdutoById(id).isPresent()) {
             produtoService.deleteProduto(id);
-            return ResponseEntity.noContent().build(); // Retorna 204 No Content
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }

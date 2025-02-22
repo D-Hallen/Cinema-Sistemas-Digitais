@@ -19,7 +19,7 @@ public class RMIClientTest {
         System.out.println("Usuarios:");
         for (Usuario usuario: service.getAllUsers()
              ) {
-            System.out.println(usuario.getNomeCompleto());
+            System.out.println(usuario.getNomeCompleto() + " " + usuario.getEmail());
         }
         System.out.println("Filmes:");
         for (Filme filme: filmeService.getAllFilmes()

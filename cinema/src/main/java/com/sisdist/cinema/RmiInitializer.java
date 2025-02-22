@@ -18,10 +18,10 @@ public class RmiInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         try {
-            // Cria ou obtém o registry na porta 1099
+            // Cria registro na porta 1099
             Registry registry = LocateRegistry.createRegistry(1099);
 
-            // Registra os serviços do RMI utilizando os beans do contexto
+
             registry.rebind("UserService", applicationContext.getBean("localUserService", UserService.class));
             registry.rebind("IngressoService", applicationContext.getBean("localIngressoService", IngressoService.class));
             registry.rebind("FilmeService", applicationContext.getBean("localFilmeService", FilmeService.class));
